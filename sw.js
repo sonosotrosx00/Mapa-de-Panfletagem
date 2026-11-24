@@ -1,6 +1,6 @@
 // Service worker: guarda o app para abrir sem internet.
 // Ao alterar arquivos do site, aumente a VERSAO para os aparelhos atualizarem.
-const VERSAO = 'v5';
+const VERSAO = 'v6';
 const SHELL = `shell-${VERSAO}`;
 const MAPAS = 'mapas-v1';
 const ARQUIVOS = [

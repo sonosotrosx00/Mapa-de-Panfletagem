@@ -8,8 +8,8 @@
   const fmt = n => Number(n).toLocaleString('pt-BR');
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  const MAPA_GERAL = 'https://www.google.com/maps/d/u/0/viewer?mid=170x7V_rPDm8UJFsyC02180h1IF46kIg&ll=-1.3743358258846803%2C-48.43146911152942&z=13';
-  const MAPA_GERAL_EMBED = 'https://www.google.com/maps/d/embed?mid=170x7V_rPDm8UJFsyC02180h1IF46kIg&ll=-1.3743358258846803%2C-48.43146911152942&z=11';
+  const MAPA_GERAL = 'https://www.google.com/maps/d/viewer?hl=pt-BR&mid=1jOZWB-L2m4NR5YbadMuEtsVGRU69oVY&ll=-1.3636809913152586%2C-48.36876460782378&z=12';
+  const MAPA_GERAL_EMBED = 'https://www.google.com/maps/d/embed?hl=pt-BR&mid=1jOZWB-L2m4NR5YbadMuEtsVGRU69oVY&ll=-1.3636809913152586%2C-48.36876460782378&z=11';
 
   const ICON = {
     chev: '<svg viewBox="0 0 24 24" class="chev"><path d="M9 6l6 6-6 6"/></svg>',
