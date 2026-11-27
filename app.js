@@ -28,12 +28,13 @@
   const pdfUrl = id => `pdf/Regiao-${id}.pdf`;
   const soma = (regs, k) => regs.reduce((a, r) => a + (r[k] || 0), 0);
 
-  const card = (r, comSemana) => `
+  const card = (r, comSemana, extra) => `
     <a class="rcard" href="#/regiao/${r.id}">
       <span class="rnum">${esc(r.id)}</span>
       <div>
         <h3>${esc(r.nome)}</h3>
         <div class="rmeta">${comSemana ? `Dia ${r.semana} · ` : ''}${turnoTxt(r.turno)} · ${esc(r.frequencia)}</div>
+        ${extra ? `<div class="rmatch">${extra}</div>` : ''}
       </div>
       ${ICON.chev}
     </a>`;
@@ -55,7 +56,7 @@
 
       <div class="search">
         ${ICON.search}
-        <input id="q" type="search" placeholder="Buscar região, diurno ou noturno" autocomplete="off" value="${esc(busca)}" aria-label="Buscar região">
+        <input id="q" type="search" placeholder="Buscar região, bairro ou rua" autocomplete="off" value="${esc(busca)}" aria-label="Buscar região">
       </div>
 
       <div id="semanaView">
@@ -110,20 +111,45 @@
       </div>`;
   }
 
+  // remove acentos e caixa para comparar textos
+  const norm = t => String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+  const marca = (txt, termo) => {
+    const i = norm(txt).indexOf(termo);
+    return i < 0 ? esc(txt) : esc(txt.slice(0, i)) + '<mark>' + esc(txt.slice(i, i + termo.length)) + '</mark>' + esc(txt.slice(i + termo.length));
+  };
+
   function aplicarBusca() {
-    const termo = busca.trim().toLowerCase().replace(/^regi[aã]o\s*/, '');
+    const termo = norm(busca).replace(/^regiao\s*/, '');
     const sv = document.getElementById('semanaView');
     const bv = document.getElementById('buscaView');
     if (!termo) { sv.hidden = false; bv.hidden = true; return; }
-    const num = termo.replace(/\D/g, '');
-    const turnoBusca = 'diurno'.startsWith(termo) ? 'DIURNO' : 'noturno'.startsWith(termo) ? 'NOTURNO' : null;
-    const res = REGIOES.filter(r => num
-      ? (num.length === 1 ? String(+r.id).startsWith(num) : r.id.startsWith(num))
-      : (turnoBusca && termo.length >= 2 ? r.turno === turnoBusca : r.nome.toLowerCase().includes(termo))
-    ).sort((a, b) => +a.id - +b.id);
     sv.hidden = true; bv.hidden = false;
+
+    const num = /^\d+$/.test(termo) ? termo : '';
+    const turnoBusca = termo.length >= 2 && 'diurno'.startsWith(termo) ? 'DIURNO' : termo.length >= 2 && 'noturno'.startsWith(termo) ? 'NOTURNO' : null;
+    const res = [];
+
+    for (const r of REGIOES) {
+      if (num) {
+        if (num.length === 1 ? String(+r.id).startsWith(num) : r.id.startsWith(num)) res.push([r, '']);
+        continue;
+      }
+      if (turnoBusca) { if (r.turno === turnoBusca) res.push([r, '']); continue; }
+      if (termo.length < 3) { if (norm(r.nome).includes(termo)) res.push([r, '']); continue; }
+
+      const motivos = [];
+      const bairros = (r.bairros || []).filter(b => norm(b).includes(termo));
+      if (bairros.length) motivos.push('Bairro: ' + bairros.map(b => marca(b, termo)).join(', '));
+      const dist = (r.distritos || []).filter(d => norm(d).includes(termo));
+      if (dist.length && !bairros.length) motivos.push('Distrito: ' + dist.map(d => marca(d, termo)).join(', '));
+      const ruas = [...new Set((r.logradouros || []).map(l => l.logradouro).filter(n => norm(n).includes(termo)))];
+      if (ruas.length) motivos.push((ruas.length > 1 ? 'Ruas: ' : 'Rua: ') + ruas.slice(0, 3).map(n => marca(n, termo)).join(', ') + (ruas.length > 3 ? ` e mais ${ruas.length - 3}` : ''));
+      if (motivos.length || norm(r.nome).includes(termo)) res.push([r, motivos.join('<br>')]);
+    }
+
+    res.sort((a, b) => +a[0].id - +b[0].id);
     bv.innerHTML = `<div class="section-label">${res.length} ${res.length === 1 ? 'região' : 'regiões'}</div>` + (res.length
-      ? `<div class="list">${res.map(r => card(r, true)).join('')}</div>`
+      ? `<div class="list">${res.map(([r, m]) => card(r, true, m)).join('')}</div>`
       : `<div class="empty">Nenhuma região encontrada.</div>`);
   }
 
@@ -162,6 +188,7 @@
         <div class="card">
           <div class="info">
             <div class="it full"><div class="k">Setor</div><div class="v">${esc(r.nome)}</div></div>
+            <div class="it full"><div class="k">${r.bairros.length > 1 ? 'Bairros' : 'Bairro'}</div><div class="v">${esc(r.bairros.join(', '))}</div></div>
             <div class="it"><div class="k">Turno</div><div class="v">${turnoTxt(r.turno)}</div></div>
             <div class="it"><div class="k">Frequência</div><div class="v">${esc(r.frequencia)}</div></div>
             <div class="it full"><div class="k">Categoria</div><div class="v">${esc(r.categoria)}</div></div>

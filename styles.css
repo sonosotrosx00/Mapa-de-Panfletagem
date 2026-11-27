@@ -157,6 +157,8 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 }
 .rcard h3 { margin: 0 0 4px; font-size: 16px; }
 .rmeta { display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; color: var(--muted); align-items: center; }
+.rmatch { font-size: 13px; color: var(--ink); margin-top: 4px; line-height: 1.4; }
+.rmatch mark { background: var(--freq-bg); color: inherit; border-radius: 3px; padding: 0 1px; }
 .chev { color: var(--muted); }
 .empty { padding: 18px 14px; color: var(--muted); font-size: 14px; text-align: center; background: var(--card); border-radius: var(--radius); }
 

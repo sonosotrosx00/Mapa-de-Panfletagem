@@ -104,6 +104,7 @@ window.SEMANAS = [
  }
 ];
 // logradouros: gerados a partir do OpenStreetMap cruzado com o shapefile das zonas
+// bairros: malha de bairros do IBGE (Censo 2022) cruzada com o shapefile das zonas
 window.REGIOES = [
  {
   "id": "01",
@@ -116,6 +117,11 @@ window.REGIOES = [
   "domicilios": 4749,
   "panfletos": 2849,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Cidade Velha",
+   "Jurunas"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Almirante Tamandaré",
@@ -354,6 +360,11 @@ window.REGIOES = [
   "domicilios": 3119,
   "panfletos": 1871,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Jurunas",
+   "Cidade Velha"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Almirante Tamandaré",
@@ -448,6 +459,10 @@ window.REGIOES = [
   "domicilios": 2747,
   "panfletos": 1648,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Jurunas"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Bernardo Sayão",
@@ -538,6 +553,11 @@ window.REGIOES = [
   "domicilios": 4580,
   "panfletos": 2748,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Jurunas",
+   "Condor"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Bernardo Sayão",
@@ -724,6 +744,10 @@ window.REGIOES = [
   "domicilios": 4156,
   "panfletos": 2494,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Jurunas"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Engenheiro Fernando Guilhon",
@@ -842,6 +866,11 @@ window.REGIOES = [
   "domicilios": 2492,
   "panfletos": 1495,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Batista Campos",
+   "Jurunas"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Engenheiro Fernando Guilhon",
@@ -928,6 +957,10 @@ window.REGIOES = [
   "domicilios": 4445,
   "panfletos": 2667,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Condor"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Roberto Camelier",
@@ -1042,6 +1075,11 @@ window.REGIOES = [
   "domicilios": 5095,
   "panfletos": 3057,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Jurunas",
+   "Batista Campos"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Roberto Camelier",
@@ -1184,6 +1222,10 @@ window.REGIOES = [
   "domicilios": 1749,
   "panfletos": 1049,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Batista Campos"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Serzedelo Corrêa",
@@ -1254,6 +1296,11 @@ window.REGIOES = [
   "domicilios": 6914,
   "panfletos": 4148,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Condor",
+   "Cremação"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Alcindo Cacela",
@@ -1444,6 +1491,11 @@ window.REGIOES = [
   "domicilios": 3421,
   "panfletos": 2053,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Condor",
+   "Guamá"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Alcindo Cacela",
@@ -1578,6 +1630,12 @@ window.REGIOES = [
   "domicilios": 4016,
   "panfletos": 2410,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Guamá",
+   "Condor",
+   "Cremação"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida José Bonifácio",
@@ -1704,6 +1762,10 @@ window.REGIOES = [
   "domicilios": 5388,
   "panfletos": 3233,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Guamá"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rua 9 de Outubro",
@@ -1866,6 +1928,10 @@ window.REGIOES = [
   "domicilios": 5624,
   "panfletos": 3374,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Guamá"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Bernardo Sayão",
@@ -2052,6 +2118,12 @@ window.REGIOES = [
   "domicilios": 6442,
   "panfletos": 3865,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Montese (Terra Firme)",
+   "Universitário",
+   "Guamá"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Perimetral da Ciência",
@@ -2234,6 +2306,11 @@ window.REGIOES = [
   "domicilios": 3562,
   "panfletos": 2137,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Canudos",
+   "São Brás"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Ceará",
@@ -2364,6 +2441,11 @@ window.REGIOES = [
   "domicilios": 3958,
   "panfletos": 2375,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Umarizal",
+   "Telégrafo"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rua Bernal do Couto",
@@ -2506,6 +2588,10 @@ window.REGIOES = [
   "domicilios": 4507,
   "panfletos": 2704,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Telégrafo"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rodovia Artur Bernardes",
@@ -2696,6 +2782,10 @@ window.REGIOES = [
   "domicilios": 2342,
   "panfletos": 1405,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Telégrafo"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Canal do Una",
@@ -2758,6 +2848,10 @@ window.REGIOES = [
   "domicilios": 4902,
   "panfletos": 2941,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Pedreira"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rua Antônio Everdosa",
@@ -2864,6 +2958,10 @@ window.REGIOES = [
   "domicilios": 4279,
   "panfletos": 2567,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Pedreira"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rua Antônio Everdosa",
@@ -2986,6 +3084,10 @@ window.REGIOES = [
   "domicilios": 3100,
   "panfletos": 1860,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Souza"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Almirante Barroso",
@@ -3256,6 +3358,12 @@ window.REGIOES = [
   "domicilios": 1334,
   "panfletos": 800,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Castanheira",
+   "Souza",
+   "Marambaia"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Almirante Barroso",
@@ -3382,6 +3490,12 @@ window.REGIOES = [
   "domicilios": 5617,
   "panfletos": 3370,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Umarizal",
+   "Pedreira",
+   "Telégrafo"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Alcindo Cacela",
@@ -3604,6 +3718,12 @@ window.REGIOES = [
   "domicilios": 3963,
   "panfletos": 2378,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Guanabara",
+   "Castanheira",
+   "Curió-Utinga"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida João Paulo II",
@@ -3802,6 +3922,10 @@ window.REGIOES = [
   "domicilios": 485,
   "panfletos": 291,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Umarizal"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Marechal Hérmes",
@@ -3824,6 +3948,11 @@ window.REGIOES = [
   "domicilios": 4055,
   "panfletos": 2433,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Maracangalha",
+   "Val-de-Cães"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Contorno",
@@ -4254,6 +4383,11 @@ window.REGIOES = [
   "domicilios": 3047,
   "panfletos": 1828,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Val-de-Cães",
+   "Mangueirão"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Arterial Sul",
@@ -4700,6 +4834,12 @@ window.REGIOES = [
   "domicilios": 2870,
   "panfletos": 1722,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Parque Verde",
+   "São Clemente",
+   "Bengui"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Padre Bruno Sechi",
@@ -4938,6 +5078,10 @@ window.REGIOES = [
   "domicilios": 4117,
   "panfletos": 2470,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Mangueirão"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Arterial Sul",
@@ -5092,6 +5236,11 @@ window.REGIOES = [
   "domicilios": 4621,
   "panfletos": 2773,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Bengui",
+   "Parque Verde"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Egydio Salles",
@@ -5326,6 +5475,10 @@ window.REGIOES = [
   "domicilios": 3132,
   "panfletos": 1879,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Bengui"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Engenheiro José Machado",
@@ -5488,6 +5641,11 @@ window.REGIOES = [
   "domicilios": 3807,
   "panfletos": 2284,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Parque Verde",
+   "Cabanagem"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Greenville",
@@ -5838,6 +5996,10 @@ window.REGIOES = [
   "domicilios": 3398,
   "panfletos": 2039,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Cabanagem"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Damasco",
@@ -6052,6 +6214,11 @@ window.REGIOES = [
   "domicilios": 3775,
   "panfletos": 2265,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Cabanagem",
+   "Coqueiro"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Brasil",
@@ -6282,6 +6449,12 @@ window.REGIOES = [
   "domicilios": 2847,
   "panfletos": 1708,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Parque Verde",
+   "Cabanagem",
+   "Coqueiro"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Arriri",
@@ -6528,6 +6701,10 @@ window.REGIOES = [
   "domicilios": 1853,
   "panfletos": 1112,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Tapanã"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Estrada da Eccir",
@@ -6650,6 +6827,13 @@ window.REGIOES = [
   "domicilios": 3535,
   "panfletos": 2121,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Parque Guajará",
+   "Tapanã"
+  ],
+  "distritos": [
+   "Icoaraci"
+  ],
   "logradouros": [
    {
     "logradouro": "Estrada da Eccir",
@@ -6868,6 +7052,12 @@ window.REGIOES = [
   "domicilios": 3207,
   "panfletos": 1924,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Tapanã",
+   "Parque Verde",
+   "São Clemente"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Padre Bruno Sechi",
@@ -7078,6 +7268,10 @@ window.REGIOES = [
   "domicilios": 3919,
   "panfletos": 2351,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Tapanã"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rodovia Artur Bernardes",
@@ -7380,6 +7574,13 @@ window.REGIOES = [
   "domicilios": 2358,
   "panfletos": 1415,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Tapanã",
+   "Paracuri"
+  ],
+  "distritos": [
+   "Icoaraci"
+  ],
   "logradouros": [
    {
     "logradouro": "Rodovia Artur Bernardes",
@@ -7610,6 +7811,10 @@ window.REGIOES = [
   "domicilios": 2325,
   "panfletos": 1395,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Coqueiro"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Central",
@@ -7796,6 +8001,10 @@ window.REGIOES = [
   "domicilios": 3308,
   "panfletos": 1985,
   "categoria": "Diurno → Noturno",
+  "bairros": [
+   "Coqueiro"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Central",
@@ -8098,6 +8307,10 @@ window.REGIOES = [
   "domicilios": 3305,
   "panfletos": 1983,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Tapanã"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Rodovia do Tapanã",
@@ -8272,6 +8485,10 @@ window.REGIOES = [
   "domicilios": 2882,
   "panfletos": 1729,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Tapanã"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Perimentral III",
@@ -8554,6 +8771,10 @@ window.REGIOES = [
   "domicilios": 2752,
   "panfletos": 1651,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Tapanã"
+  ],
+  "distritos": [],
   "logradouros": [
    {
     "logradouro": "Avenida Madrid",
@@ -8852,6 +9073,13 @@ window.REGIOES = [
   "domicilios": 523,
   "panfletos": 314,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Ponta Grossa",
+   "Paracuri"
+  ],
+  "distritos": [
+   "Icoaraci"
+  ],
   "logradouros": [
    {
     "logradouro": "Rodovia Artur Bernardes",
@@ -8890,6 +9118,14 @@ window.REGIOES = [
   "domicilios": 2594,
   "panfletos": 1556,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Água Boa",
+   "Itaiteua",
+   "São João do Outeiro"
+  ],
+  "distritos": [
+   "Outeiro"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida Beira Mar",
@@ -9244,6 +9480,13 @@ window.REGIOES = [
   "domicilios": 2221,
   "panfletos": 1333,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Água Boa",
+   "Itaiteua"
+  ],
+  "distritos": [
+   "Outeiro"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida Atlantida",
@@ -9406,6 +9649,13 @@ window.REGIOES = [
   "domicilios": 3306,
   "panfletos": 1984,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Itaiteua",
+   "Água Boa"
+  ],
+  "distritos": [
+   "Outeiro"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida 16 de Novembro",
@@ -9864,6 +10114,12 @@ window.REGIOES = [
   "domicilios": 315,
   "panfletos": 189,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Vila"
+  ],
+  "distritos": [
+   "Mosqueiro"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida 16 de Novembro",
@@ -9914,6 +10170,13 @@ window.REGIOES = [
   "domicilios": 2500,
   "panfletos": 1500,
   "categoria": "Mudança de Frequência",
+  "bairros": [
+   "Murubira",
+   "Arirambá"
+  ],
+  "distritos": [
+   "Mosqueiro"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida 16 de Novembro",
@@ -10104,6 +10367,12 @@ window.REGIOES = [
   "domicilios": 3049,
   "panfletos": 1829,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Campina de Icoaraci"
+  ],
+  "distritos": [
+   "Icoaraci"
+  ],
   "logradouros": [
    {
     "logradouro": "Estrada Velha do Outeiro",
@@ -10226,6 +10495,13 @@ window.REGIOES = [
   "domicilios": 2016,
   "panfletos": 1210,
   "categoria": "Noturno → Diurno",
+  "bairros": [
+   "Campina de Icoaraci",
+   "Águas Negras"
+  ],
+  "distritos": [
+   "Icoaraci"
+  ],
   "logradouros": [
    {
     "logradouro": "Avenida Contorno",
